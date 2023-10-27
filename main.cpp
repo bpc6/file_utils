@@ -1,27 +1,14 @@
 #include <iostream>
-#include <sstream>
 #include <vector>
 #include "file_operations.h"
+#include "user_input.h"
 
 
 int main() {
-    std::cout << ">> ";
-    std::string usr_input;
-    getline(std::cin, usr_input);
-    std::istringstream iss(usr_input);
-    std::string token, cmd;
+    std::string input = collect_input();
+    std::string cmd;
     std::vector<std::string> args;
-
-    int count = 0;
-    while (iss >> token) {
-        if (count == 0) {
-            cmd = token;
-        }
-        else {
-            args.push_back(token);
-        }
-        count++;
-    }
+    parse_input(input, cmd, args);
 
     if (cmd == "cp") {
         if (args.size() == 2) {
