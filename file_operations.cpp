@@ -6,17 +6,17 @@
 int copy(const std::string& path_in, const std::string& path_out) {
     std::ifstream  src(path_in, std::ios::binary);
     if (!src.is_open()) {
-        std::cerr << "Error: Cannot open the source file." << std::endl;
+        std::cout << "Error: Cannot open the source file." << std::endl;
         return EXIT_FAILURE;
     }
     std::ofstream  dst(path_out, std::ios::binary);
     if (!dst.is_open()) {
-        std::cerr << "Error: Cannot open the destination file." << std::endl;
+        std::cout << "Error: Cannot open the destination file." << std::endl;
         return EXIT_FAILURE;
     }
     dst << src.rdbuf();
     if (!dst) {
-        std::cerr << "Error: Copy operation failed." << std::endl;
+        std::cout << "Error: Copy operation failed." << std::endl;
         return EXIT_FAILURE;
     }
     return EXIT_SUCCESS;
@@ -26,7 +26,7 @@ int copy(const std::string& path_in, const std::string& path_out) {
 int remove_all(const std::vector<std::string>& files) {
     for (const std::string& f : files) {
         if (std::remove(f.c_str())) {
-            std::cerr << "Error: Remove operation failed for " << f  << std::endl;
+            std::cout << "Error: Remove operation failed for " << f << std::endl;
             return EXIT_FAILURE;
         }
     }
