@@ -1,11 +1,11 @@
-Project Title: Basic File Management Utility in C++
+# Basic File Management Utility in C++
 
 Project Duration: Approximately 3 hours
 
-Objective:
+## Objective
 Create a simple command-line file management utility in C++ that performs basic file operations such as copying, moving, and deleting files. This project aims to help you get familiar with C++ syntax and basic file handling concepts.
 
-Requirements:
+## Requirements
 1. Command-Line Interface:
    Create a user-friendly command-line interface that allows the user to input commands and parameters.
 
@@ -30,7 +30,7 @@ Requirements:
 8. Documentation (Optional):
    Include comments in your code to explain the purpose of functions, variables, and any complex logic. You can also create a brief README file that explains how to build and run your program.
 
-Suggested Steps:
+## Suggested Steps
 1. Set up your C++ development environment. If you don't already have one, you can use tools like g++ to compile your code.
 
 2. Plan your program's structure and create the necessary functions to perform file operations.

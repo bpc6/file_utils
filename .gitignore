@@ -34,4 +34,3 @@
 # IntelliJ
 .idea/
 cmake-build-debug/
-main
